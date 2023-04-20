@@ -11,6 +11,7 @@ let items = [];
 let workItems = [];
 
 app.get("/", (req, res) => {
+  let day = date();
   res.render("list", { listTitle: day, newListItems: items });
 });
 
@@ -28,15 +29,13 @@ app.post("/work", (req, res) => {
 app.post("/", (req, res) => {
   let item = req.body.newItem;
 
-  if (req.body.list === "Work List") {
+  if (req.body.list === "Work") {
     workItems.push(item);
     res.redirect("/work");
   } else {
     items.push(item);
     res.redirect("/");
   }
-
-  items.push(item);
 
   res.redirect("/");
 });

@@ -1,8 +1,5 @@
-module.exports = getDate;
-
 const getDate = () => {
   let today = new Date();
-  let currentDay = today.getDay();
 
   let options = {
     weekday: "long",
@@ -14,3 +11,5 @@ const getDate = () => {
 
   return day;
 };
+
+module.exports = getDate;
