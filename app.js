@@ -10,17 +10,6 @@ let items = [];
 let workItems = [];
 
 app.get("/", (req, res) => {
-  let today = new Date();
-  let currentDay = today.getDay();
-
-  let options = {
-    weekday: "long",
-    day: "numeric",
-    month: "long",
-  };
-
-  let day = today.toLocaleDateString("en-US", options);
-
   res.render("list", { listTitle: day, newListItems: items });
 });
 
