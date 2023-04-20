@@ -10,17 +10,23 @@
 </head>
 
 <body>
-    <h1><%= kindOfDay%></h1>
-    <ul>
-       <% for(let item of newListItems){ %>
-            <li><%=item %></li>
-       <% } %>
-
-    </ul>
-    <form action="/" method="post"">
-        <input type="text" name="newItem">
-        <button type="submit" name="button">Add Item</button>
-    </form>
+    <div class="box" id="heading">
+        <h1>
+            <%= kindOfDay%>
+        </h1>
+    </div>
+    <div class="box">
+        <% for(let item of newListItems){ %>
+            <div class="item">
+                <input type="checkbox">
+                <p><%=item %></p>
+            </div>
+        <% } %>
+        <form action="/" method="post"">
+            <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+            <button type="submit" name="button">+</button>
+        </form>
+    </div>
 </body>
 
 </html>

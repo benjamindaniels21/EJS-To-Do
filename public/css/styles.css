@@ -57,7 +57,7 @@ form {
 }
 
 button {
-  height: 50px;
+  min-height: 50px;
   width: 50px;
   border-radius: 50%;
   border-color: transparent;
