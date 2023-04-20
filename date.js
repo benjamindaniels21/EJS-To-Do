@@ -12,4 +12,17 @@ const getDate = () => {
   return day;
 };
 
-module.exports = getDate;
+const getDay = () => {
+  let today = new Date();
+
+  let options = {
+    weekday: "long",
+  };
+
+  let day = today.toLocaleDateString("en-US", options);
+
+  return day;
+};
+
+module.exports.getDate = getDate;
+module.exports.getDay = getDay;
