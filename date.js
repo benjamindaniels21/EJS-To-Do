@@ -1,10 +1,16 @@
-let today = new Date();
-let currentDay = today.getDay();
+module.exports = getDate;
 
-let options = {
-  weekday: "long",
-  day: "numeric",
-  month: "long",
+const getDate = () => {
+  let today = new Date();
+  let currentDay = today.getDay();
+
+  let options = {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+  };
+
+  let day = today.toLocaleDateString("en-US", options);
+
+  return day;
 };
-
-let day = today.toLocaleDateString("en-US", options);
